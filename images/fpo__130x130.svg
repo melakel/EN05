@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#F2F2F2" x="0" y="0" width="130" height="130"></rect>
+        <text id="FPO-130x130" font-family="Helvetica" font-size="12" font-weight="normal" letter-spacing="-0.009524" fill="#4A4A4A">
+            <tspan x="52.6803016" y="62">FPO</tspan>
+            <tspan x="42.0118496" y="76">130x130</tspan>
+        </text>
+    </g>
+</svg>
