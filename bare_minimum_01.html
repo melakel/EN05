@@ -156,6 +156,9 @@
       .table-col-01 {
         padding: 24px;
       }
+      .landscape img {
+        padding-left: 20px;
+      }
       .table-col-02 {
         padding: 0 32px;
       }
@@ -170,7 +173,7 @@
       .table-col-07 {
         padding: 24px;
       }
-      #quantity {
+      .table-qty {
         width: 60px;
       }
       .dropdown {
@@ -258,7 +261,7 @@
                 <th class="all-caps" style="width: 180px;">Action</th>
               </tr>
               <tr>
-                <td class="border-bottom table-col-01">
+                <td class="border-bottom table-col-01 landscape">
                   <img id="search_icon" src="images/fpo__130x100.svg">
                 </td>
                 <td class="border-bottom table-col-02">
@@ -269,7 +272,7 @@
                 <td class="border-bottom table-col-04">10</td>
                 <td class="border-bottom table-col-05">10</td>
                 <td class="border-bottom table-col-06">
-                  <input type="number" id="quantity" name="quantity"
+                  <input class="table-qty" type="number" id="quantity" name="quantity"
                   min="1" max="100" aria-labelledby="sku_po input_quantity">
                 </td>
                 <td class="border-bottom table-col-07">
@@ -304,7 +307,7 @@
                 <td class="border-bottom table-col-04">20</td>
                 <td class="border-bottom table-col-05">30</td>
                 <td class="border-bottom table-col-06">
-                  <input type="number" id="quantity" name="quantity"
+                  <input class="table-qty" type="number" id="quantity" name="quantity"
                   min="1" max="100" aria-labelledby="sku_po input_quantity">
                 </td>
                 <td class="border-bottom table-col-07">
@@ -327,17 +330,7 @@
                   </button>
                 </td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+              
               <tr>
                 <td></td>
                 <td></td>
