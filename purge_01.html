@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSENSE PURGE</title>
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12pt;
+        background-color: #F5F5F7;
+        color: #4A4A4A;
+      }
+
+      @media only screen and (max-width: 320px) {
+        .full-width {
+          width: 100%;
+        }
+      }
+
+     
+      main {
+          width: 100%;
+          height: 100vh;
+          background-color: #FFF;
+          margin-top: 20px;
+          /* margin-left: auto;
+          margin-right: auto; */
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 40px;
+          border: 1px solid #DFDFDF;
+          border-radius: 4px;
+      }
+
+      .logo_ssense {
+        width: 83px;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+
+      h1 {
+        font-size: 12px;
+        font-weight: 550;
+        margin-left: 10px;
+        margin-top: 28px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+          color: #000;
+          font-size: 18px;
+          margin: 20px;
+          text-align: center;
+          font-weight: 500;
+          margin-top: 38px;
+      }
+
+      .header-banner {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+      }
+
+      .primary-btn {
+        height: 36px;
+        background-color: #000;
+        text-transform: uppercase;
+        width: 220px;
+        border: none;
+        color: #FFF;
+      }
+
+      .horizontal-center {
+        margin: 0;
+        position: absolute;
+        left: 60%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+
+      .RO-origin-destination {
+        width: 258px;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .RO-both {
+        width: 258px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        position: absolute;
+        bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .RO-origin-key, .RO-dest-key {
+        width: 128px;
+        height: 20px;
+        padding: 3px;
+        background-color: #000;
+        color: #FFF;
+        border-right: 1px solid #FFF;
+        text-align: center;
+      }
+
+      .RO-origin-value {
+        background-color: #FFF;
+        width: 132px;
+        height: 28px;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        padding-top: 6px;
+        font-weight: 520;
+      }
+
+      .RO-dest-value {
+        background-color: #FFF;
+        width: 132px;
+        height: 28px;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        padding-top: 6px;
+        font-weight: 520;
+      }
+
+    </style>
+  </head>
+  <body class="full-width">
+    <header>
+      <div class="header-banner">
+        <img class="logo_ssense" alt="SSENSE Logo" src="images/ssense_logo_black.svg">
+        <h1>Purge</h1>
+      </div>
+    </header>
+
+    <main class="canvas">
+        <section>
+          <h2>Purge</h2>
+          <div class="horizontal-center">
+            <button class="primary-btn start-btn">Start</button>
+          </div>
+        </section>
+
+        <section class="RO-origin-destination">
+          <div class="RO-both">
+            <div class="RO-origin">
+              <div class="RO-origin-key">Origin</div>
+              <div class="RO-origin-value">MP</div>
+            </div>
+
+            <div class="RO-dest">
+              <div class="RO-dest-key">Destination</div>
+              <div class="RO-dest-value">MD</div>
+            </div>
+          </div>
+        </section>
+    </main>
+
+  </body>
+</html>
