@@ -143,7 +143,12 @@
           border-bottom: 1px solid #5E5E5E;
           margin-bottom: 15px;
       }
-
+      section.list-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #FFF;
+      }
       .selected-form-input {
         margin-left: 40px;
         width: calc(100% - 20px);
@@ -187,12 +192,9 @@
         margin-left: -40px;
         padding-left: 20px;
       }
-      .size {
-          font-weight: 600;
-      }
-      .actions {
+      /* .actions {
         height: 560px;
-      }
+      } */
       .canvas {
         position: relative;
       }
@@ -213,6 +215,7 @@
         color: #252525;
         width: 80px;
       }
+
       button.cta-btn {
         background-color: #000;
         color: #FFF;
@@ -229,6 +232,27 @@
       li:not(:first-child) {
         padding-top: 12px;
       }
+      .size {
+          font-weight: 600;
+      }
+      section.list-of-skus.edit-items {
+        border-top: none;
+      }
+      .canvas.actions {
+        height: 520px;
+      }
+      /* If list-items extends past height, add this style */
+      main.canvas.actions.edit-items {
+        overflow-y: scroll;
+      }
+      .two-button-row {
+          height: 36px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 20px;
+          width: 100%;
+      }
 
 
     </style>
@@ -241,36 +265,56 @@
       </div>
     </header>
 
-    <main class="canvas actions">
-        <section>
+    <main class="canvas actions edit-items">
+        <section class="list-header">
           <div class="selected-items-header">
             <h2 class="selected-items">Selected Items</h2>
-            <p class="counter">1 item</p>
-          </div>
-            <div class="selected-form-input flex-col">
-              <label for="SKUscan">SKU</label>
-              <div>
-                <input type="text" id="searchTRO" name="SKUscan"><br><br>
-              </div>
+            <p class="counter">10 items</p>
           </div>
         </section>
 
-        <section class="list-of-skus">
+        <section class="list-of-skus edit-items">
           <ul>
             <li>
-              SKU: 221751F110007<span class="size">00</span>
+              SKU: 212751F052006<span class="size">02</span>
             </li>
+            <li>
+              SKU: 212751F05200<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 212751F05200<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">01</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">00</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">04</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">03</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">01</span>
+            </li>
+            <li>
+                SKU: 221751F110007<span class="size">00</span>
+              </li>
           </ul>
         </section>       
     </main>
 
-    <div class="button-row">
+    <div class="two-button-row">
       <button>Cancel</button>
-      
-      <div class="button-pair">
-        <button>Edit</button>
-        <button class="cta-btn">Purge</button>
-      </div>
+      <button class="cta-btn">Done</button>
     </div>
 
   </body>
