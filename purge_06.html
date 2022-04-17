@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSENSE PURGE</title>
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12pt;
+        background-color: #F5F5F7;
+        color: #4A4A4A;
+        height: 640px;
+      }
+
+      @media only screen and (max-width: 320px) {
+        .full-width {
+          width: 100%;
+        }
+      }
+
+     
+      main {
+          width: 100%;
+          height: 100vh;
+          background-color: #FFF;
+          margin-top: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 40px;
+          border: 1px solid #979797;
+          border-radius: 4px;
+      }
+
+      .logo_ssense {
+        width: 83px;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
+
+      h1 {
+        font-size: 12px;
+        font-weight: 550;
+        margin-left: 10px;
+        margin-top: 28px;
+        text-transform: uppercase;
+      }
+
+      h2.selected-items {
+          color: #000;
+          font-size: 18px;
+          text-align: left;
+          font-weight: 500;
+          margin-top: 38px;
+      }
+
+      .header-banner {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+      }
+
+      .primary-btn {
+        height: 36px;
+        background-color: #000;
+        text-transform: uppercase;
+        width: 220px;
+        border: none;
+        color: #FFF;
+      }
+
+      .horizontal-center {
+        margin: 0;
+        position: absolute;
+        left: 60%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+
+      .RO-origin-destination {
+        width: 258px;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .RO-both {
+        width: 258px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        position: absolute;
+        bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .RO-origin-key, .RO-dest-key {
+        width: 128px;
+        height: 20px;
+        padding: 3px;
+        background-color: #000;
+        color: #FFF;
+        border-right: 1px solid #FFF;
+        text-align: center;
+      }
+
+      .RO-origin-value {
+        background-color: #FFF;
+        width: 132px;
+        height: 28px;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        padding-top: 6px;
+        font-weight: 520;
+      }
+
+      .RO-dest-value {
+        background-color: #FFF;
+        width: 132px;
+        height: 28px;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        padding-top: 6px;
+        font-weight: 520;
+      }
+
+      .selected-items-header {
+          height: 60px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          vertical-align:middle;
+          width: calc(100% - 40px);
+          margin-left: auto;
+          margin-right: auto;
+          border-bottom: 1px solid #5E5E5E;
+          margin-bottom: 15px;
+      }
+      section.list-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #FFF;
+      }
+      .selected-form-input {
+        margin-left: 40px;
+        width: calc(100% - 20px);
+      }
+
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-size: 12px;
+        font-weight: 575;
+        margin-bottom: 3px;
+      }
+
+      input {
+        width: 224px;
+        height: 36px;
+        border: 1px solid #C7C7C7;
+        border-radius: 4px;
+      }
+
+      .counter {
+          padding-top: 22px;
+      }
+
+      section.list-of-skus {
+          border-top: 1px solid #5E5E5E;
+          width: calc(100% - 20px);
+          margin-left: auto;
+          margin-right: auto;
+      }
+      section.list-of-skus ul li {
+        list-style: none;
+      }
+      section.list-of-skus ul li {
+        border-bottom: 1px dotted #C7C7C7;
+        padding-bottom: 12px;
+        border-image-width: 3;
+        margin-left: -40px;
+        padding-left: 20px;
+      }
+      /* .actions {
+        height: 560px;
+      } */
+      .canvas {
+        position: relative;
+      }
+      .button-row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20px;
+      }
+      .button-row button {
+        height: 36px;
+      }
+      button {
+        background-color: #FFF;
+        border: 1px solid #C7C7C7;
+        text-transform: uppercase;
+        color: #252525;
+        width: 80px;
+      }
+
+      button.cta-btn {
+        background-color: #000;
+        color: #FFF;
+        border: none;
+        margin-left: 15px;
+      }
+      .button-pair {
+        width: 160px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      li:not(:first-child) {
+        padding-top: 12px;
+      }
+      .size {
+          font-weight: 600;
+      }
+      section.list-of-skus.edit-items {
+        border-top: none;
+      }
+      .canvas.actions {
+        height: 520px;
+      }
+      /* If list-items extends past height, add this style */
+      main.canvas.actions.edit-items {
+        overflow-y: scroll;
+      }
+      .two-button-row {
+          height: 36px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: 20px;
+          width: 100%;
+      }
+      .remove-mode {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+      }
+
+
+    </style>
+  </head>
+  <body class="full-width">
+    <header>
+      <div class="header-banner">
+        <img class="logo_ssense" alt="SSENSE Logo" src="images/ssense_logo_black.svg">
+        <h1>Purge</h1>
+      </div>
+    </header>
+
+    <main class="canvas actions edit-items">
+        <section class="list-header">
+          <div class="selected-items-header">
+            <h2 class="selected-items">Selected Items</h2>
+            <p class="counter">10 items</p>
+          </div>
+        </section>
+
+        <section class="list-of-skus edit-items">
+          <ul>
+            <li class="remove-mode">
+                <span class="product-and-size">
+                    SKU: 212751F052006<span class="size">02</span>
+                </span>
+              <span class="remove-icon">
+                <img alt="Remove icon" src="images/minus-circle.svg">
+              </span>
+            </li>
+            <li>
+              SKU: 212751F05200<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 212751F05200<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">01</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">00</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">04</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">03</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">01</span>
+            </li>
+            <li>
+                SKU: 221751F110007<span class="size">00</span>
+              </li>
+          </ul>
+        </section>       
+    </main>
+
+    <div class="two-button-row">
+      <button>Cancel</button>
+      <button class="cta-btn">Done</button>
+    </div>
+
+  </body>
+</html>
