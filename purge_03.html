@@ -171,14 +171,57 @@
           padding-top: 22px;
       }
 
-      .list-of-skus {
+      section.list-of-skus {
           border-top: 1px solid #5E5E5E;
           width: calc(100% - 20px);
           margin-left: auto;
           margin-right: auto;
       }
+      section.list-of-skus ul li {
+        list-style: none;
+      }
+      section.list-of-skus ul {
+        border-bottom: 1px dotted #C7C7C7;
+        padding-bottom: 12px;
+        border-image-width: 3;
+      }
+      .actions {
+        height: 560px;
+      }
+      .canvas {
+        position: relative;
+      }
+      .button-row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 20px;
+      }
+      .button-row button {
+        height: 36px;
+      }
+      button {
+        background-color: #FFF;
+        border: 1px solid #C7C7C7;
+        text-transform: uppercase;
+        color: #252525;
+        width: 80px;
+      }
 
-      
+      button.cta-btn {
+        background-color: #000;
+        color: #FFF;
+        border: none;
+        margin-left: 15px;
+      }
+      .button-pair {
+        width: 160px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
 
     </style>
@@ -191,7 +234,7 @@
       </div>
     </header>
 
-    <main class="canvas">
+    <main class="canvas actions">
         <section>
           <div class="selected-items-header">
             <h2 class="selected-items">Selected Items</h2>
@@ -206,11 +249,22 @@
         </section>
 
         <section class="list-of-skus">
-
-        </section>
-
-       
+          <ul>
+            <li>
+              SKU: 221751F110007<span class="size">00</span>
+            </li>
+          </ul>
+        </section>       
     </main>
+
+    <div class="button-row">
+      <button>Cancel</button>
+      
+      <div class="button-pair">
+        <button>Edit</button>
+        <button class="cta-btn">Purge</button>
+      </div>
+    </div>
 
   </body>
 </html>
