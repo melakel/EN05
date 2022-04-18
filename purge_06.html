@@ -259,6 +259,18 @@
           width: 100%;
           justify-content: space-between;
       }
+      span.edit-mode-indicator {
+        width: 36px;
+        height: 18px;
+        font-size: 12px;
+        background-color: #000;
+        color: #FFF;
+        padding: 3px 5px;
+        text-transform: uppercase;
+        margin-left: 2px;
+        vertical-align: 3px;
+        border: none;
+      }
 
 
     </style>
@@ -274,7 +286,7 @@
     <main class="canvas actions edit-items">
         <section class="list-header">
           <div class="selected-items-header">
-            <h2 class="selected-items">Selected Items</h2>
+            <h2 class="selected-items">Selected Items <span class="edit-mode-indicator">Edit</span></h2>
             <p class="counter">10 items</p>
           </div>
         </section>
