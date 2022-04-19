@@ -1,0 +1,348 @@
+<!--
+  NOTES: https://mui.com/getting-started/usage/
+  INPUT: https://mui.com/components/text-fields/
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSENSE TRO</title>
+    <style>
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12pt;
+        /* width: 612px; */
+        /* height: 792px; */
+        /* margin: auto; */
+        background-color: #ECEBEC;
+        color: #4A4A4A;
+      }
+
+      .flex-row {
+          display: flex;
+          flex-direction: row;
+      }
+
+      h1 {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-top: 20px;
+      }
+
+      h2 {
+          color: #4A4A4A;
+          font-size: 18px;
+          margin: 20px;
+          font-weight: 400;
+      }
+
+      h3 {
+          color: #4A4A4A;
+          font-size: 16px;
+          margin: 20px;
+          font-weight: 400;
+      }
+
+      .full-width {
+        width: 100%;
+      }
+
+      .navbar {
+          background-color: #FFF;
+          width: 100%;
+          height: 60px;
+          margin: 0;
+          padding: 0;
+          z-index: -1;
+             -webkit-box-shadow: 0px 0px 8px 2px #C7C7C7;
+             -moz-box-shadow: 0px 0px 8px 2px #C7C7C7;
+             box-shadow: 0px 0px 8px 2px #C7C7C7;
+      }
+    
+      .navbar img {
+          padding: 15px;
+      }
+     
+      main {
+          width: 100%;
+          height: 100vh;
+          background-color: #FFF;
+          margin: 20px;
+          border-radius: 4px;
+          border: 1px solid #DFDFDF;
+      }
+
+      .form-input {
+          margin-left: 20px;
+          margin-top: -10px;
+      }
+
+      .flex-col {
+          display: flex;
+          flex-direction: column;
+      }
+      
+      label {
+          color: #949495;
+          font-size: 12px;
+          font-style: italic;
+      }
+      input {
+          width: 280px;
+          height: 32px;
+          border: 1px solid #DFDFDF;
+          margin-top: 12px;
+          border-radius: 4px;
+      }
+      .btn-search {
+        width: 108px;
+        height: 36px;
+        border-radius: 4px;
+        background-color: #3181B2;
+        color: #FFF;
+        border: none;
+        padding-top: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-top: 12px;
+        margin-left: 10px;
+      }
+      .btn-inline {
+        display: flex;
+      }
+      .btn-clear {
+        width: 75px;
+        height: 36px;
+        border-radius: 4px;
+        background-color: #000;
+        color: #FFF;
+        border: none;
+        padding-top: 8px;
+        padding-left: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-top: 12px;
+        margin-left: 10px;
+      }
+      .table-01 {
+        border: 1px solid #F2F2F2;
+        height: 300px;
+        overflow-y: auto;
+        margin: 15px 20px;
+      }
+      .table-02 {
+        border: 1px solid #F2F2F2;
+        height: 300px;
+        overflow-y: auto;
+        margin: 15px 20px;
+      }
+      .gray {
+        color: gray;
+      }
+      .all-caps {
+        text-transform: uppercase;
+      }
+      table {
+        border-spacing: 0;
+        width: 100%;
+      }
+      .border-bottom {
+        border-bottom: 1px solid #DFDFDF;
+      }
+      .table-col-01 {
+        padding: 24px;
+      }
+      .landscape img {
+        padding-left: 20px;
+      }
+      .table-col-02 {
+        padding: 0 32px;
+      }
+      .table-col-03, 
+      .table-col-04, 
+      .table-col-05 {
+        padding: 24px;
+      }
+      .table-col-06 {
+        padding: 24px;
+      }
+      .table-col-07 {
+        padding: 24px;
+      }
+      .table-qty {
+        width: 60px;
+      }
+      .dropdown {
+        height: 36px;
+        border-radius: 4px;
+        border-color: #DFDFDF;
+        padding: 8px;
+        margin-top: 10px;
+      }
+      .table-col-08 {
+        width: 150px;
+        padding: 24px;
+      }
+      .cell-sizes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .cell-sizes span {
+        text-align: left;
+      }
+      .btn-add-tro {
+        width: 120px;
+        height: 36px;
+        border-radius: 4px;
+        background-color: #FD9E28;
+        color: #FFF;
+        border: none;
+        padding-top: 8px;
+        padding-left: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-top: 12px;
+        margin-left: 10px;
+      }
+      .table-col-09 {
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <section class="navbar-float">
+            <div class="navbar box-shadow flex-row">
+                <img src="images/menu.svg"><h1>Inventory</h1>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <h2>Search</h2>
+            <div class="form-input flex-col">
+                <label for="searchTRO">Search up to 5 items at a time (ex. ### ### ### ### ###)</label>
+                <div class="btn-inline">
+                  <input type="text" id="searchTRO" name="searchTRO"><br><br>
+                  <button class="btn-search">
+                    <span>
+                      <img src="images/search_white.svg">
+                    </span>Search
+                  </button>
+                  <button class="btn-clear">
+                    Clear
+                  </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="tro-tables">
+          <section class="table-01">
+            <h3>Search Results <span class="gray">(5 items)</span></h3>
+            <table>
+              <!--row 01-->
+              <tr>
+                <th style="width: 150px;">Image</th>
+                <th id="sku_po" style="width: 220px;">SKU / Product Code</th>
+                <th style="width: 65px;">MD</th>
+                <th style="width: 65px;">MS</th>
+                <th style="width: 65px;">MP</th>
+                <th id="input_quantity" style="width: 100px;">Quantity</th>
+                <th id="input_origin" style="width: 100px;">Origin</th>
+                <th id="input_destination" style="width: 80px;">Destination</th>
+                <th style="width: 150px;">Size</th>
+                <th class="all-caps" style="width: 180px;">Action</th>
+              </tr>
+              <tr>
+                <td class="border-bottom table-col-01 landscape">
+                  <img id="search_icon" src="images/fpo__130x100.svg">
+                </td>
+                <td class="border-bottom table-col-02">
+                  <span>221249M20105600</span>
+                  <span>221249M201056</span>
+                </td>
+                <td class="border-bottom table-col-03">10</td>
+                <td class="border-bottom table-col-04">10</td>
+                <td class="border-bottom table-col-05">10</td>
+                <td class="border-bottom table-col-06">
+                  <input class="table-qty" type="number" id="quantity" name="quantity"
+                  min="1" max="100" aria-labelledby="sku_po input_quantity">
+                </td>
+                <td class="border-bottom table-col-07">
+                  <select class="dropdown" id="origin" name="origin" aria-labelledby="sku_po input_origin">
+                    <option value="MD">MD</option>
+                    <option value="MP">MP</option>
+                    <option value="MS">MS</option>
+                </select>
+                <td class="border-bottom table-col-07_1">
+                  <select class="dropdown" id="destination" name="destination" aria-labelledby="sku_po input_destination">
+                    <option value="MD">MD</option>
+                    <option value="MP">MP</option>
+                    <option value="MS">MS</option>
+                </select>
+                </td>
+                <td class="border-bottom table-col-08">
+                  <span class="cell-sizes">
+                    <span>XS 00</span>
+                    <span>US 32</span>
+                    <span>EU 42</span>
+                  </span>
+                </td>
+                <td class="border-bottom table-col-09">
+                  <button class="btn-add-tro">
+                    Add to tro
+                  </button>
+                </td>
+              </tr>
+             
+              
+          </table>
+          </section>
+          
+          <section class="table-02">
+            <h3>Queue</h3>
+            <table>
+              <tr>
+                <th>Image</th>
+                <th>SKU / Product Code</th>
+                <th>MD</th>
+                <th>MS</th>
+                <th>MP</th>
+                <th>Quantity</th>
+                <th>Origin</th>
+                <th>Size</th>
+                <th class="all-caps">Action</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+          </table>
+          </section>
+        </div>
+    </main>
+    <footer></footer>
+
+  </body>
+</html>
