@@ -124,6 +124,7 @@
             font-weight: 520;
         }
 
+
       /*---------- 480px ----------*/
       @media only screen and (max-width: 480px) {
         body {
@@ -138,16 +139,43 @@
         }
         .RO-both {
             width: 260px;
+            margin-left: auto;
+            margin-right: auto;
         }
       }
 
       /*---------- 220px ----------*/
-      @media only screen and (max-width: 220px) {
+      @media screen and (max-width: 220px) {
+        body {
+            width: 220px;
+        }
         main {
-            width: calc(100% - 5px);
+          width: calc(100% - 15px) !important;
+        }
+        .primary-btn {
+            width: 160px !important;
+        }
+        .RO-origin-key {
+            width: 92px;
+        }
+        .RO-origin-value {
+            width: 94px;
+        }
+        .RO-dest-value {
+            width: 94px;
+        }
+        .RO-dest-key {
+            width: 90px;
+        }
+        .RO-both {
+            width: 90px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-left: 5px;
         }
       }
-    
+
+      
 
     </style>
   </head>
@@ -163,7 +191,7 @@
         <section>
           <h2>Purge</h2>
           <div class="center-element">
-            <button class="primary-btn">Start</button>
+            <button class="primary-btn start-btn">Start</button>
           </div>
         </section>
 
