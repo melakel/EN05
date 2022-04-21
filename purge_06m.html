@@ -186,7 +186,6 @@
         margin-left: -40px;
         padding-left: 20px;
       }
-
       .size {
         font-weight: 600;
       }
@@ -253,6 +252,12 @@
           margin-left: auto;
           margin-right: auto;
       }
+      .remove-mode {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+      }
       span.edit-mode-indicator {
         width: 36px;
         height: 18px;
@@ -265,7 +270,6 @@
         vertical-align: 3px;
         border: none;
       }
-
       /*---------- 320px ----------*/
       @media only screen and (max-width: 320px) {
         body {
@@ -293,8 +297,13 @@
 
         <section class="list-of-skus edit-items">
           <ul>
-            <li>
-              SKU: 212751F052006<span class="size">02</span>
+            <li class="remove-mode">
+                <span class="product-and-size">
+                    SKU: 212751F052006<span class="size">02</span>
+                </span>
+              <span class="remove-icon">
+                <img alt="Remove icon" src="images/minus-circle.svg">
+              </span>
             </li>
             <li>
               SKU: 212751F05200<span class="size">02</span>
