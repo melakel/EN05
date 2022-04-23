@@ -136,7 +136,13 @@
           border-bottom: 1px solid #5E5E5E;
           margin-bottom: 15px;
       }
-
+      section.list-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: #FFF;
+      }
+      
       .selected-form-input {
         width: calc(100% - 32px);
         margin-left: auto;
@@ -172,19 +178,21 @@
       }
       section.list-of-skus ul li {
         list-style: none;
+      }
+      section.list-of-skus ul li {
         border-bottom: 1px dotted #C7C7C7;
         padding-bottom: 12px;
         border-image-width: 3;
         margin-left: -40px;
         padding-left: 20px;
       }
-    
+
       .size {
-          font-weight: 600;
+        font-weight: 600;
       }
-      .actions {
+      /* .actions {
         height: 560px;
-      }
+      } */
       .canvas {
         position: relative;
       }
@@ -206,6 +214,7 @@
         color: #252525;
         width: 80px;
       }
+
       button.cta-btn {
         background-color: #000;
         color: #FFF;
@@ -221,6 +230,40 @@
       }
       li:not(:first-child) {
         padding-top: 12px;
+      }
+      .size {
+          font-weight: 600;
+      }
+      section.list-of-skus.edit-items {
+        border-top: none;
+      }
+      .canvas.actions {
+        height: 520px;
+      }
+      /* If list-items extends past height, add this style */
+      main.canvas.actions.edit-items {
+        overflow-y: scroll;
+      }
+      .two-button-row {
+          height: 36px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: calc(100% - 24px);
+          margin-left: auto;
+          margin-right: auto;
+      }
+      span.edit-mode-indicator {
+        width: 36px;
+        height: 18px;
+        font-size: 12px;
+        background-color: #000;
+        color: #FFF;
+        padding: 3px 5px;
+        text-transform: uppercase;
+        margin-left: 2px;
+        vertical-align: 3px;
+        border: none;
       }
       /*---------- 480px ----------*/
       @media only screen and (max-width: 480px) {
@@ -285,8 +328,16 @@
         section.list-of-skus {
           font-size: 14px;
         }
+        span.edit-mode-indicator {
+          font-size: 10px;
+          padding: 2px;
+        }
         section.list-of-skus ul li {
           padding-left: 10px;
+        }
+        button.cta-btn {
+          width: 80px;
+          height: 36px;
         }
       }
 
@@ -300,22 +351,40 @@
       </div>
     </header>
 
-    <main class="canvas actions">
-        <section>
+    <main class="canvas actions edit-items">
+        <section class="list-header">
           <div class="selected-items-header">
-            <h2 class="selected-items">Selected Items</h2>
-            <p class="counter">3 items</p>
-          </div>
-            <div class="selected-form-input flex-col">
-              <label for="SKUscan">SKU</label>
-              <div>
-                <input type="text" id="searchTRO" name="SKUscan"><br><br>
-              </div>
+            <h2 class="selected-items">Selected Items <span class="edit-mode-indicator">Edit</span></h2>
+            <p class="counter">10/10 items</p>
           </div>
         </section>
 
-        <section class="list-of-skus">
+        <section class="list-of-skus edit-items">
           <ul>
+            <li>
+              SKU: 212751F052006<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 212751F05200<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 212751F05200<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">02</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">01</span>
+            </li>
+            <li>
+              SKU: 221751F110006<span class="size">00</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">04</span>
+            </li>
+            <li>
+              SKU: 221751F110007<span class="size">03</span>
+            </li>
             <li>
               SKU: 221751F110007<span class="size">02</span>
             </li>
@@ -323,19 +392,15 @@
               SKU: 221751F110007<span class="size">01</span>
             </li>
             <li>
-              SKU: 221751F110007<span class="size">00</span>
-            </li>
+                SKU: 221751F110007<span class="size">00</span>
+              </li>
           </ul>
         </section>       
     </main>
 
-    <div class="button-row">
+    <div class="two-button-row">
       <button>Cancel</button>
-      
-      <div class="button-pair">
-        <button>Edit</button>
-        <button class="cta-btn">Purge</button>
-      </div>
+      <button class="cta-btn">Done</button>
     </div>
 
   </body>
